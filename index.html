@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ελληνικά Νέα | Όλες οι Ειδήσεις σε Ένα Μέρος</title>
+    <meta name="description"
+        content="Συγκεντρώνουμε τις ειδήσεις από τα κορυφαία ελληνικά μέσα ενημέρωσης. Πολιτική, Οικονομία, Αθλητικά, Κόσμος.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-newspaper"></i>
+                <span>Ελληνικά<strong>Νέα</strong></span>
+            </div>
+            <div class="header-info">
+                <span class="date" id="current-date"></span>
+                <button class="refresh-btn" id="refresh-btn" title="Ανανέωση">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Filters -->
+    <nav class="categories">
+        <div class="categories-container">
+            <button class="category-btn active" data-category="all">
+                <i class="fas fa-globe"></i>
+                Όλα
+            </button>
+            <button class="category-btn" data-category="politics">
+                <i class="fas fa-landmark"></i>
+                Πολιτική
+            </button>
+            <button class="category-btn" data-category="economy">
+                <i class="fas fa-chart-line"></i>
+                Οικονομία
+            </button>
+            <button class="category-btn" data-category="world">
+                <i class="fas fa-earth-europe"></i>
+                Κόσμος
+            </button>
+            <button class="category-btn" data-category="sports">
+                <i class="fas fa-futbol"></i>
+                Αθλητικά
+            </button>
+            <button class="category-btn" data-category="tech">
+                <i class="fas fa-microchip"></i>
+                Τεχνολογία
+            </button>
+            <button class="category-btn" data-category="entertainment">
+                <i class="fas fa-film"></i>
+                Ψυχαγωγία
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <span id="news-count">Φόρτωση ειδήσεων...</span>
+                <span class="sources-label">
+                    <i class="fas fa-rss"></i>
+                    <span id="sources-count">0</span> πηγές
+                </span>
+            </div>
+
+            <!-- Featured Section -->
+            <section class="featured-section" id="featured-section">
+                <!-- Featured news will be injected here -->
+            </section>
+
+            <!-- News Grid -->
+            <section class="news-grid" id="news-grid">
+                <!-- News cards will be injected here -->
+            </section>
+
+            <!-- Loading State -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Φόρτωση ειδήσεων...</p>
+            </div>
+
+            <!-- Error State -->
+            <div class="error-state hidden" id="error-state">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Πρόβλημα Σύνδεσης</h3>
+                <p>Δεν ήταν δυνατή η φόρτωση των ειδήσεων. Παρακαλώ δοκιμάστε ξανά.</p>
+                <button class="retry-btn" id="retry-btn">
+                    <i class="fas fa-redo"></i>
+                    Επανάληψη
+                </button>
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state hidden" id="empty-state">
+                <i class="fas fa-inbox"></i>
+                <h3>Δεν βρέθηκαν ειδήσεις</h3>
+                <p>Δεν υπάρχουν ειδήσεις σε αυτή την κατηγορία.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sources Section -->
+    <section class="sources-section">
+        <div class="container">
+            <h2><i class="fas fa-newspaper"></i> Πηγές Ειδήσεων</h2>
+            <div class="sources-grid" id="sources-grid">
+                <!-- Sources will be displayed here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <i class="fas fa-code"></i>
+                Ελληνικά Νέα - Συγκέντρωση ειδήσεων από τα κορυφαία ελληνικά μέσα
+            </p>
+            <p class="disclaimer">
+                Όλες οι ειδήσεις ανήκουν στις αντίστοιχες πηγές τους.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
